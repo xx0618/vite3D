@@ -1,7 +1,7 @@
 import Axios from 'axios'
 //import { ElMessage } from 'element-plus'
  
-const baseURL = 'https://api.github.com'
+const baseURL = ''  //https://api.github.com'
  
 const axios = Axios.create({
   baseURL,  //所有的请求地址前缀部分（没有后端请求不用写）
