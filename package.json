@@ -1,0 +1,31 @@
+{
+  "name": "btoastra",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "@types/three": "^0.152.1",
+    "axios": "^1.4.0",
+    "element-plus": "^2.3.7",
+    "pinia": "^2.1.4",
+    "three": "^0.153.0",
+    "vue": "^3.2.47",
+    "vue-router": "^4.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.1",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "scss": "^0.2.4",
+    "typescript": "^5.0.2",
+    "unplugin-auto-import": "^0.16.4",
+    "unplugin-vue-components": "^0.25.1",
+    "vite": "^4.3.9",
+    "vue-tsc": "^1.4.2"
+  }
+}
