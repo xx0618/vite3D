@@ -72,7 +72,7 @@ function init() {
 
     };
 
-    new EXRLoader().load( '/src/assets/hb4k.exr', function ( texture ) {
+    new EXRLoader().load( '../assets/hb4k.exr', function ( texture ) {
 
         texture.mapping = THREE.EquirectangularReflectionMapping;
 
@@ -81,7 +81,7 @@ function init() {
 
     } );
 
-    new THREE.TextureLoader().load( '/src/assets/hb4k.png', function ( texture:any ) {
+    new THREE.TextureLoader().load( '../assets/hb4k.png', function ( texture:any ) {
 
         texture.mapping = THREE.EquirectangularReflectionMapping;
         texture.colorSpace = THREE.SRGBColorSpace;
