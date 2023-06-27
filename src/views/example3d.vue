@@ -10,6 +10,7 @@ import Stats from 'three/addons/libs/stats.module.js';
 import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { EXRLoader } from 'three/addons/loaders/EXRLoader.js';
+import { getImageURL } from '@/utils/loadImages.js'
 
 const params = {
     envMap: 'EXR',
@@ -24,6 +25,8 @@ let camera:any, scene:any, renderer:any, controls:any;
 let torusMesh:any, planeMesh:any;
 let pngCubeRenderTarget:any, exrCubeRenderTarget:any;
 let pngBackground:any, exrBackground:any;
+const exrName = 'hb4k.exr'
+const pngName = 'hb4k.png'
 
 init();
 animate();
@@ -72,7 +75,7 @@ function init() {
 
     };
 
-    new EXRLoader().load( '../assets/hb4k.exr', function ( texture ) {
+    new EXRLoader().load( getImageURL(exrName), function ( texture ) {
 
         texture.mapping = THREE.EquirectangularReflectionMapping;
 
@@ -81,7 +84,7 @@ function init() {
 
     } );
 
-    new THREE.TextureLoader().load( '../assets/hb4k.png', function ( texture:any ) {
+    new THREE.TextureLoader().load( getImageURL(pngName), function ( texture:any ) {
 
         texture.mapping = THREE.EquirectangularReflectionMapping;
         texture.colorSpace = THREE.SRGBColorSpace;
